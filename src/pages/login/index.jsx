@@ -25,7 +25,7 @@ const styles = {
     color: '#acb4d0',
   },
   img: {
-    marginTop: 165,
+    marginTop: 125,
     marginBottom: 16,
     witdh: 211,
     height: 191,
