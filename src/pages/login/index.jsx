@@ -1,6 +1,5 @@
 import React from 'react';
 import { withStyles } from '@material-ui/core/styles';
-import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
 import CircularProgress from '@material-ui/core/CircularProgress';
 
@@ -38,7 +37,7 @@ const styles = {
   },
   button: {
     backgroundColor: '#eeda2b',
-    color: 'white',
+    color: 'black',
     borderRadius: 10,
     paddingLeft: 32,
     paddingRight: 32,
@@ -58,12 +57,12 @@ class Login extends React.Component {
   login = () => {
     this.setState({ loading: true }, () =>
       setTimeout(() =>
-        this.props.history.push('/home'), 2000));
+        this.props.history.push('/avisos'), 2000));
   };
 
   render() {
-    const { classes, history } = this.props;
-    const { loading, completed } = this.state;
+    const { classes } = this.props;
+    const { loading } = this.state;
 
     return (
       <div className={classes.root}>
@@ -76,7 +75,7 @@ class Login extends React.Component {
           <div className={classes.textWrapper}>
             <div className={classes.text}>
               Seja avisado quando um produto de interessse for anunciado próximo a você no OLX
-        </div>
+            </div>
           </div>
         </div>
         <div className={classes.buttonWrapper}>
