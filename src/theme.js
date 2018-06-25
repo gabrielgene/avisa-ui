@@ -1,6 +1,20 @@
 import { createMuiTheme } from '@material-ui/core/styles';
 
 export const theme = createMuiTheme({
+  typography: {
+    fontFamily: [
+      'Raleway',
+      'Roboto',
+      'sans-serif'
+    ].join(','),
+    button: {
+      letterSpacing: 1,
+      fontWeight: 600,
+    },
+    title: {
+      fontWeight: 600,
+    },
+  },
   palette: {
     primary: {
       light: '#1B69B0',
