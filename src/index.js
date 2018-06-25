@@ -6,6 +6,7 @@ import { MuiThemeProvider } from '@material-ui/core/styles';
 import Login from './pages/login';
 import AlertsList from './pages/alerts-list';
 import NewAlert from './pages/new-alert';
+import Settings from './pages/settings';
 
 import { theme } from './theme';
 import './index.css';
@@ -18,6 +19,7 @@ const App = () => (
         <Route exact path="/" component={Login} />
         <Route path="/avisos" component={AlertsList} />
         <Route path="/novo-aviso" component={NewAlert} />
+        <Route path="/configuracao" component={Settings} />
         <Redirect to="/avisos" />
       </Switch>
     </Router>
