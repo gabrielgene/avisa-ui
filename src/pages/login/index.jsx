@@ -3,10 +3,10 @@ import { withStyles } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
 import CircularProgress from '@material-ui/core/CircularProgress';
 
-const styles = {
+const styles = theme => ({
   root: {
     height: '100%',
-    backgroundColor: '#053d7f'
+    backgroundColor: theme.palette.primary.main,
   },
   logo: {
     textAlign: 'center',
@@ -21,16 +21,16 @@ const styles = {
     width: 260,
     fontSize: 16,
     fontFamily: 'Raleway',
-    color: '#acb4d0',
+    color: 'rgba(255, 255, 255, 0.7)',
   },
   img: {
-    marginTop: 125,
-    marginBottom: 16,
+    marginTop: theme.spacing.unit * 16,
+    marginBottom: theme.spacing.unit * 2,
     witdh: 211,
     height: 191,
   },
   buttonWrapper: {
-    marginTop: 60,
+    marginTop: theme.spacing.unit * 7.5,
     width: '100%',
     display: 'flex',
     justifyContent: 'center',
@@ -38,16 +38,14 @@ const styles = {
   button: {
     backgroundColor: '#eeda2b',
     color: 'black',
-    borderRadius: 10,
-    paddingLeft: 32,
-    paddingRight: 32,
-    fontFamily: 'Raleway',
-    fontWeight: 600,
+    borderRadius:theme.spacing.unit + 2,
+    paddingLeft: theme.spacing.unit * 4,
+    paddingRight: theme.spacing.unit * 4,
   },
   progress: {
-    marginTop: 60,
+    marginTop: theme.spacing.unit * 7.5,
   }
-};
+});
 
 class Login extends React.Component {
   state = {
