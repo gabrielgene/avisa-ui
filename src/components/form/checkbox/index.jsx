@@ -13,19 +13,14 @@ const styles = theme => ({
   }
 });
 
-class CheckboxesGroup extends React.Component {
-  state = {
-    gilad: true,
-    jason: false,
-    antoine: true,
-  };
+class CheckboxGroup extends React.Component {
 
   handleChange = name => event => {
     this.setState({ [name]: event.target.checked });
   };
 
   render() {
-    const { title, checks, classes } = this.props;
+    const { title, checks, classes, handleChange, value, checked } = this.props;
 
     return (
       <FormControl component="fieldset" className={classes.root}>
@@ -37,6 +32,7 @@ class CheckboxesGroup extends React.Component {
                 key={v}
                 control={
                   <Checkbox
+                    checked={checked}
                     color="primary"
                   />
                 }
@@ -50,4 +46,4 @@ class CheckboxesGroup extends React.Component {
   }
 }
 
-export default withStyles(styles)(CheckboxesGroup);
+export default withStyles(styles)(CheckboxGroup);
